@@ -1,3 +1,11 @@
-<p>
-  list-item works!
-</p>
+<div class="photo">
+  <ion-img class="photo__image" [src]="user.avatar"></ion-img>
+</div>
+<div class="details">
+  <div class="details__item details__item_name">
+    {{ user.first_name + " " + user.last_name }}
+  </div>
+  <div class="details__item details__item_email">
+    <a class="link" href="mailto:{{ user.email }}">{{ user.email }}</a>
+  </div>
+</div>

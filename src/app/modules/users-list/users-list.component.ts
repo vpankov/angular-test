@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { USER } from 'src/app/services/types';
 
 @Component({
   selector: 'app-users-list',
@@ -6,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./users-list.component.scss'],
 })
 export class UsersListComponent implements OnInit {
+  @Input() users: USER[] = [];
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {}
-
 }
