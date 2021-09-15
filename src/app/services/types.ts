@@ -19,3 +19,8 @@ export type USERS_RESPONSE = {
   total: number;
   total_pages: number;
 };
+
+export type USER_DETAILS_RESPONSE = {
+  data: USER;
+  support: SUPPORT;
+}

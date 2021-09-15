@@ -43,7 +43,7 @@ export class UsersService {
       });
   }
 
-  getUserDetails(id){
-    this.httpClient.get(this.baseUrl + '/users/' + id);
+  getUserDetails(id): Observable<any>{
+    return this.httpClient.get(this.baseUrl + '/users/' + id);
   }
 }

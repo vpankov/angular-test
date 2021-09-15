@@ -1,9 +1,15 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>user-details</ion-title>
+    <ion-title>{{userDetails.first_name + ' ' + userDetails.last_name}}</ion-title>
+    <ion-buttons slot="end" (click)="dismiss()">Close</ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <div class="photo">
+    <img class="photo__image" [src]="userDetails.avatar" alt="">
+  </div>
+  <div class="email">
+    <a class="email__link" href="mailto:{{userDetails.email}}">{{userDetails.email}}</a>
+  </div>
 </ion-content>
