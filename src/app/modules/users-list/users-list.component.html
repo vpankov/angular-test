@@ -1,3 +1,10 @@
-<div *ngFor="let user of users" class="item">
-  <app-list-item [user]="user"></app-list-item>
+<div *ngIf="users.length; else emptyList">
+  <div *ngFor="let user of users" class="item">
+    <app-list-item [user]="user"></app-list-item>
+  </div>
 </div>
+
+<ng-template #emptyList>
+  There are not users
+</ng-template>
+
