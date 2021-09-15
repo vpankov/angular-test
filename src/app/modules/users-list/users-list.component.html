@@ -1,10 +1,12 @@
-<div *ngIf="users.length; else emptyList">
+<div *ngIf="users.length; else emptyList" (scroll)="scrollHandler($event)" class="container">
   <div *ngFor="let user of users" class="item">
     <app-list-item [user]="user"></app-list-item>
   </div>
+
+  <app-loader *ngIf="isLoading" class="loaders"></app-loader>
 </div>
 
 <ng-template #emptyList>
-  There are not users
+  There are no users
 </ng-template>
 

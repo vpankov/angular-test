@@ -8,6 +8,6 @@
 
 <ion-content>
   <div class="container">
-      <app-users-list [users]="usersService.users"></app-users-list>
+      <app-users-list [isLoading]="usersService.isLoading" (scrollEnd)="usersService.getUsers()" [users]="usersService.users"></app-users-list>
   </div>
 </ion-content>
