@@ -42,4 +42,8 @@ export class UsersService {
         this.isLoading = false;
       });
   }
+
+  getUserDetails(id){
+    this.httpClient.get(this.baseUrl + '/users/' + id);
+  }
 }

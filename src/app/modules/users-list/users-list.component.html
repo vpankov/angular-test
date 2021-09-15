@@ -1,5 +1,8 @@
 <div *ngIf="users.length; else emptyList" (scroll)="scrollHandler($event)" class="container">
-  <div *ngFor="let user of users" class="item">
+  <div
+      *ngFor="let user of users"
+      class="item"
+      (click)="showDetails(user)">
     <app-list-item [user]="user"></app-list-item>
   </div>
 

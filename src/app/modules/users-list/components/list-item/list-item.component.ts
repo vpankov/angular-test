@@ -1,5 +1,6 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { USER } from 'src/app/services/types';
+import { UsersService } from 'src/app/services/users.service';
 @Component({
   selector: 'app-list-item',
   templateUrl: './list-item.component.html',
@@ -8,8 +9,9 @@ import { USER } from 'src/app/services/types';
 export class ListItemComponent implements OnInit {
   @Input() user: USER;
 
-  constructor() {}
+  constructor(
+    public usersService: UsersService,
+  ) {}
 
   ngOnInit() {}
-
 }
